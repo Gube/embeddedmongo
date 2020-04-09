@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/MartenCatcher/embeddedmongo/env"
-	"github.com/MartenCatcher/embeddedmongo/uuid"
+	"github.com/gube/embeddedmongo/env"
+	"github.com/gube/embeddedmongo/uuid"
 )
 
 type (
@@ -14,8 +14,8 @@ type (
 )
 
 const (
-	V3_4_1 Version = "3.4.1"
-	DEFAULT_URL = "https://fastdl.mongodb.org/"
+	V3_4_1      Version = "3.4.1"
+	DEFAULT_URL         = "https://fastdl.mongodb.org/"
 )
 
 type Distribution struct {
