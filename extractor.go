@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/mholt/archiver"
+	"github.com/mholt/archiver/v3"
 )
 
 // Extract the distribution and return the directory files list
@@ -26,9 +26,9 @@ func Extract(d *Distribution) ([]string, error) {
 
 	switch d.Extension {
 	case "zip":
-		err = archiver.Zip.Open(path, temp)
+		err = archiver.Unarchive(path, temp)
 	case "tgz":
-		err = archiver.TarGz.Open(path, temp)
+		err = archiver.Unarchive(path, temp)
 	default:
 		return files, errors.New(fmt.Sprintf("not supported archive: %v", d.Extension))
 	}
